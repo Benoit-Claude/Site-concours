@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style2.css">
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+</head>
+
+<body class="pageco">
+
+<div id="connexion" >
+    <h2><a href="#formulaire" onclick="myfunction()">Connexion</a></h2>
+    <div id="formulaire" >
+        <form action="" method="get" class="connexion">
+            <div class="formulaire">
+                <label for="name">Identifiant</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="formulaire">
+                <label for="email">Mot de passe</label>
+                <input type="text" name="mdp" id="mdp" required>
+            </div>
+            <div class="formulaire">
+                <input type="submit" value="valider">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div id="inscription" >
+    <h2><a href="#formulaireinscription" onclick="myfunction2()">Inscription</a></h2>
+    <div id="formulaireinscription" >
+        <form action="accueil.html" method="get" class="connexion">
+            <div class="formulaire">
+                <label for="Nom">Nom</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="formulaire">
+                <label for="Prénom">Prénom</label>
+                <input type="text" name="Prénom" id="Prénom" required>
+            </div>
+            <div class="formulaire">
+                <label for="Pseudo">Pseudo en jeu</label>
+                <input type="text" name="Pseuddo" id="Pseudo" required>
+            </div>
+            <div class="formulaire">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="formulaire">
+                <label for="MDP">Mot de passe</label>
+                <input type="text" name="mdp" id="mdp" required>
+            </div>
+            <div class="formulaire">
+                <input type="submit" value="valider">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function myfunction() {
+        var x = document.getElementById("formulaire");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function myfunction2() {
+        var x = document.getElementById("formulaireinscription");
+        var connexion = document.getElementById("connexion");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            connexion.style.marginTop = "0";
+        } else {
+            x.style.display = "none";
+            connexion.style.marginTop = "20%";
+        }
+    }
+
+</script>
+
+</body>
+</html>
+

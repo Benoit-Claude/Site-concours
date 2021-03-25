@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styleaccueil.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<header class="entête">
+    <ul>
+        <li>Inscrire une video</li>
+        <li>Devenir juge </li>
+        <li>Comment ca fonctionne</li>
+        <li>Acheter des tickets</li>
+    </ul>
+
+    <h1>Ishida' s kingdom</h1>
+
+    <img src="img/logo.png" alt="logo site">
+    <div class="joueur">
+        <h3>PseudoJoueur83</h3>
+        <p>123$</p>
+    </div>
+</header>
+
+<main>
+
+    <div class="sousheader">
+        <div class="inscire">
+            <h1>S'inscrire</h1>
+            <img id="sabres" src="img/kisspng-katana-drawing-sword-wakizashi-weapon-katana-5abf93ee5e3d28.172164011522504686386.png" alt="">
+        </div>
+        <div class="juger">
+            <h1>Juger</h1>
+            <img id="balance" src="img/balance2.png" alt="">
+        </div>
+    </div>
+
+    <div class="résultat">
+        <div class="champion">
+            <img id="crown" src="img/crown.png" alt="couronne">
+            <h1>Grand Champion</h1>
+            <div class="gagnant">
+                <img id="nomgagnant" src="img/nomgagnant.png" alt="">
+                <h2>C'estluilevainqueur49</h2>
+            </div>
+        </div>
+    </div>
+
+    <aside>
+        <div class="catégorie1">
+            <img src="img/dollar.png" alt="">
+            <h1>Top 1 le plus rentable</h1>
+            <h2>Joueurrentable58</h2>
+            <p>72.520/partie</p>
+            <p>Twitch.tv/Joueurrentable58</p>
+        </div>
+        <div class="catégorie2">
+            <img src="img/tente.png" alt="">
+            <h1>Le roi des campeurs</h1>
+            <h2>LeCampeurdu79</h2>
+            <p>Twitch.tv/LeCampeurdu79</p>
+        </div>
+        <div class="catégorie3">
+            <img src="img/artiste.png" alt="">
+            <h1>l'artiste en chef</h1>
+            <h2>Picasso93</h2>
+            <p>Twitch.tv/Picasso93</p>
+        </div>
+    </aside>
+
+
+
+
+    <div class="vidéovassaux">
+        <ul id="navigation">
+            <li>
+                <a href="#slide1" accesskey="1">1</a>
+            </li>
+            <li>
+                <a href="#slide2" accesskey="2">2</a>
+            </li>
+            <li>
+                <a href="#slide3" accesskey="3">3</a>
+            </li>
+            <li>
+                <a href="#slide4" accesskey="4">4</a>
+            </li>
+            <li>
+                <a href="#slide5" accesskey="5">5</a>
+            </li>
+        </ul>
+
+        <div class="vassaux">
+            <img id="vassaux" src="img/vassaux.png" alt="">
+            <h1>Ses Vassaux</h1>
+        </div>
+
+        <div id="bouton">
+            <button id="avant">Avant</button>
+            <button id="apres">Après</button>
+        </div>
+
+
+        <div id="slider">
+            <div id="slide1" class="courant">
+                <img class="couronnev" src="img/crown4.png" alt="">
+                <h1>Grand Vassal</h1>
+                <img class="gagnantvassal" src="img/nomgagnant.png" alt="">
+                <h2>vassal89</h2>
+                <img src="img/youtube.png" alt="">
+
+            </div>
+            <div id="slide2" class="apres-1">
+                <img class="couronnev" src="img/crown 2.png" alt="">
+                <h1>Grand Vassal</h1>
+                <img class="gagnantvassal" src="img/nomgagnant.png" alt="">
+                <h2>vassal54</h2>
+                <img src="img/youtube.png" alt="">
+
+                </div>
+            <div id="slide3" class="apres-2">
+                <img class="couronnev" src="img/crown 3.png" alt="">
+                <h1>Grand Vassal</h1>
+                <img class="gagnantvassal" src="img/nomgagnant.png" alt="">
+                <h2>vassal32</h2>
+                <img src="img/youtube.png" alt="">
+
+                </div>
+            <div id="slide4" class="apres-3">
+                <img class="couronnev" src="img/crown 5.png" alt="">
+                <h1>Grand Vassal</h1>
+                <img class="gagnantvassal" src="img/nomgagnant.png" alt="">
+                <h2>vassal47</h2>
+                <img src="img/youtube.png" alt="">
+
+                </div>
+        </div>
+
+    </div>
+
+
+
+</main>
+
+<footer>
+    <h1>ceci est le footer</h1>
+</footer>
+
+<script>
+
+    (function (){
+        "use strict";
+
+        function clickSurUnLien (evt) {
+            if (evt.target.matches("a")) {
+                var lien = evt.target;
+                console.log(lien, "c'est le lien")
+            }
+            var selecteurDuSlide = lien.getAttribute("href");
+            console.log("le sélecteur CSS pour trouver le DIV : ", selecteurDuSlide);
+            document.querySelector('.courant').classList.remove('courant');
+            var nouveau = document.querySelector(selecteurDuSlide);
+            affiche(nouveau);
+            clearInterval(timer);
+        }
+
+        document.querySelector("#navigation").addEventListener('click', clickSurUnLien);
+
+
+        function affiche (nouveau){
+            nouveau.className = 'courant';
+            var precedent = nouveau;
+            var a = 1;
+            while (precedent = precedent.previousElementSibling){
+                precedent.classList="";
+                precedent.classList.add("avant-" + a);
+                a++;
+            }
+
+            var suivant = nouveau;
+            var u = 1;
+            while ( suivant = suivant.nextElementSibling){
+                suivant.classList="";
+                suivant.classList.add("apres-"+u);
+                u++;
+            }
+        }
+
+        function clicksursuivant (){
+            var ancienneslide = document.querySelector("#slider>div.courant");
+            var nouveau = ancienneslide.nextElementSibling;
+            affiche(nouveau);
+            clearInterval(timer);
+        }
+
+        document.querySelector("#apres").addEventListener('click', clicksursuivant);
+
+        function clicksurprecedent (){
+            var ancienneslide = document.querySelector("#slider>div.courant");
+            var nouveau = ancienneslide.previousElementSibling;
+            affiche(nouveau);
+            clearInterval(timer);
+        }
+
+        document.querySelector("#avant").addEventListener('click', clicksurprecedent);
+
+        var timer = setInterval(timersuivant, 2000);
+
+        function timersuivant (){
+            var ancienneslide = document.querySelector("#slider>div.courant");
+            var nouveau = ancienneslide.nextElementSibling;
+            affiche(nouveau);
+        }
+
+
+    }());
+
+
+
+</script>
+
+
+</body>
+</html>

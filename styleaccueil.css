@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e3caca;
+}
+
+ul {
+    padding-left: 10px;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    color: #CF1D1D;
+}
+
+
+.entête {
+    background-color: black;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    display: block;
+    top: 0;
+}
+
+.entête h1 {
+    color: #f2f2f2;
+    font-family: "Felix Titling";
+    text-align: center;
+}
+
+.joueur {
+    position: absolute;
+    top: 0;
+    right: 60px;
+}
+.joueur p {
+    color: #CF1D1D;
+    font-family: EcuyerDAX;
+    margin-top: 5px;
+}
+.joueur h3{
+    color: gold;
+    font-family: EcuyerDAX;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.entête img {
+    height: 60px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*sous le header*/
+
+.sousheader {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: black;
+}
+.inscire {
+    display: block;
+}
+
+.inscire h1 {
+    position: absolute;
+    top: 12%;
+    font-family: EcuyerDAX;
+    font-size: 50px;
+    color: #CF1D1D;
+    font-weight: lighter;
+}
+
+.juger h1 {
+    position: absolute;
+    top: 12%;
+    font-family: EcuyerDAX;
+    font-size: 50px;
+    margin-left: 20px;
+    color: #CF1D1D;
+    font-weight: lighter;
+}
+
+.juger {
+    display: block;
+    margin-left: 100px;
+}
+
+.inscire img#sabres, .juger img#balance {
+    width: 150px;
+    height: 150px;
+}
+
+
+/*div résultat champion*/
+
+.résultat {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+main {
+    margin-bottom: 500px;
+}
+
+main .champion {
+    width: 300px;
+    text-align: center;
+    color: #cf8008;
+    border: 1px solid;
+    background-color: #E9B8B8;
+    margin-top: 100px;
+    padding-bottom: 40px;
+}
+.champion img#crown {
+    width: 200px;
+    height: 180px;
+}
+.champion img#nomgagnant {
+    width: 250px;
+    height: 120px;
+}
+.champion h1 {
+    font-size: 35px;
+}
+.champion h2 {
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 37%;
+}
+
+.gagnant {
+    display: inline-block;
+    position: relative;
+}
+
+/* aside */
+
+.catégorie1 img,.catégorie2 img, .catégorie3 img {
+    width: 70px;
+    height: 70px;
+}
+
+aside {
+    position: absolute;
+    float: left;
+    background-color: #E9B8B8;
+    border: 1px solid;
+    margin: 100px;
+
+}
+
+.catégorie1, .catégorie2, .catégorie3 {
+    text-align: center;
+}
+
+aside h1,h2 {
+    font-family: EcuyerDAX;
+    color: #cf8008;
+}
+
+#vassaux {
+    width: 70px;
+    height: 70px;
+}
+
+.vassaux {
+    text-align: center;
+    margin-top: 100px;
+    font-family: "Felix Titling";
+    color: #565555;
+}
+
+#slider .couronnev {
+    width: 200px;
+    height: 150px;
+}
+
+#slider .gagnantvassal {
+    width: 200px;
+    height: 100px;
+}
+
+#slider img {
+    width: 200px;
+    height: 200px;
+}
+
+#slider>div {
+    position: absolute;
+    flex-shrink: 0;
+    padding: 10px;
+    transition: 1s ease-out;
+    background: gray;
+    margin-left: 20px;
+}
+
+#slider {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+    perspective: 600px;
+    transform-style: preserve-3d;
+    perspective-origin: 50% 50%;
+}
+
+#slider .avant-1 {
+    transform: translateX(-260px) translateZ(-130px) rotateY(80deg);
+}
+
+#slider .apres-1 {
+    transform: translateX(260px) translateZ(-130px) rotateY(-80deg);
+}
+
+#slider .avant-2 {
+    transform: translateX(-330px) translateZ(-130px) rotateY(80deg);
+}
+
+#slider .apres-2 {
+    transform: translateX(330px) translateZ(-130px) rotateY(-80deg);
+}
+
+#slider .avant-3 {
+    transform: translateX(-400px) translateZ(-130px) rotateY(80deg);
+}
+
+#slider .apres-3 {
+    transform: translateX(400px) translateZ(-130px) rotateY(-80deg);
+}
+
+#slider .avant-4 {
+    transform: translateX(-470px) translateZ(-130px) rotateY(80deg);
+}
+
+#slider .apres-4 {
+    transform: translateX(470px) translateZ(-130px) rotateY(-80deg);
+}
+
+#bouton {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#navigation {
+    display: none;
+}
+
+#slider h2 {
+    position: absolute;
+    text-align: center;
+    top: 46%;
+    left: 0;
+    right: 0px;
+}
+
+footer {
+    background-color: black;
+    color: #E9B8B8;
+    height: 400px;
+    position: relative;
+    margin-top: 100px;
+}
+
+

@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+h2 {
+    font-family: "Felix Titling";
+    font-size: 6vh;
+    color: #cf8008;
+    text-align: left;
+    margin-left: 100px;
+}
+
+span {
+    font-family: "Felix Titling";
+    font-size: 6vh;
+    color: #cf8008;
+    float: right;
+    margin-right: 100px;
+}
+
+h1 {
+    font-family: "Felix Titling";
+    font-size: 20vh;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+button>a{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-family: EcuyerDAX;
+    font-size: 3vh;
+}
+
+button {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    padding: 15px 25px;
+    font-size: 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    background-color: #565555;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 9px #222222;
+    outline: none;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
